@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadAbout from "./About";
 console.log("hello world");
 
 function createNav() {

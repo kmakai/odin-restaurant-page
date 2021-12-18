@@ -1,7 +1,8 @@
-import createT from "./home"
+import loadHome from "./home";
 console.log("hello world");
 
 function createNav() {
+    const m = document.querySelector('#mainct');
     const content = document.querySelector("#content");
     const navigation = document.createElement('nav');
     const navList = document.createElement('ul');
@@ -19,9 +20,9 @@ function createNav() {
     navList.appendChild(listItem3);
 
     navigation.appendChild(navList);
-    content.appendChild(navigation);
+    m.before(navigation);
     navigation.classList = "navbar";
 }
 
 createNav();
-createT();
+loadHome();

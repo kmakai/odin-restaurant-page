@@ -1,5 +1,5 @@
-import loadHome from "./home";
-import loadAbout from "./About";
+import loadHome from "./home.js";
+import loadMenu from "./menu.js";
 console.log("hello world");
 
 function createNav() {

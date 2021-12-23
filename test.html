@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="content"></div>
+  <script>
+    //Navbar
+    function createNav() {
+      const navigation = document.createElement('nav');
+      const navList = document.createElement('ul');
+
+      const listItem1 = document.createElement('li');
+      listItem1.innerText = "Home"
+      navList.appendChild(listItem1);
+      listItem1.addEventListener("click", () => { loadHome() });
+
+
+      const listItem2 = document.createElement('li');
+      listItem2.innerText = "Menu"
+      navList.appendChild(listItem2);
+      listItem2.addEventListener("click", () => { loadMenu() });
+
+      const listItem3 = document.createElement('li');
+      listItem3.innerText = "Contact";
+      navList.appendChild(listItem3);
+      listItem3.addEventListener("click", () => { loadContact() });
+
+      navigation.appendChild(navList);
+      navigation.classList = "navbar";
+
+      return navigation;
+    }
+
+    function loadNav() {
+      document.querySelector("#content").append(createNav());
+    }
+
+    //home
+    function createHome() {
+      const main = document.createElement('div');
+      main.id = "mainct";
+
+      const title = document.createElement('h3');
+      title.innerText = "Welcome to Binx's!";
+
+      const img = document.createElement('img');
+      img.alt = "binx";
+
+      const discription = document.createElement('p');
+      discription.innerText = "We welcome you to Binx's cafe, the most cozy warm cafe in town. Come in to have yourself the best coffee and meet the cat binx.";
+
+      main.appendChild(title);
+      main.append(img);
+      main.append(discription);
+
+
+      return main;
+
+    }
+
+    function loadHome() {
+      if (document.querySelector('.navbar').nextSibling === null) {
+        document.querySelector('.navbar').after(createHome());
+      } else {
+        document.querySelector('#content').removeChild(document.querySelector('.navbar').nextSibling);
+        document.querySelector('.navbar').after(createHome());
+      }
+    }
+
+    //menu
+    function createMenuItem(Item, discription, cost) {
+      const menuitem = document.createElement('div');
+      const item = document.createElement("h4");
+      item.textContent = Item;
+      menuitem.append(item);
+      const itemInfo = document.createElement('p');
+      itemInfo.textContent = discription;
+      menuitem.append(itemInfo);
+      const price = document.createElement('h5');
+      price.textContent = cost;
+      menuitem.append(price);
+
+      return menuitem;
+    }
+
+    function createMenu() {
+      const menu = document.createElement('div')
+
+      menu.appendChild(createMenuItem("Coffee", "black coffee with sugar or your choice of sweetener. also available with lightener +$1.", "$6.99"));
+      menu.appendChild(createMenuItem("Latte", "Espresso with your choice of milk as well as flavoring", "$4.45"));
+      menu.appendChild(createMenuItem("Carmel Macchiato", "Carmel sauce & Vanilla syrup W/ Espresso and your choice of milk", "$4.95"));
+      menu.appendChild(createMenuItem("Pumpkin Spice Latte", "1/2 Pumpkin Pie 1/2 White Mocha W/ Espresso and your choice of milk", "$5.30"));
+      menu.appendChild(createMenuItem("Cafe Breve", "double espresso + 5oz./14oz. steamed half & half", "$5.45"));
+      menu.appendChild(createMenuItem("Melted Snowman (Affagato)", "scoop of vanilla ice cream + double espresso", "$7.50"));
+      return menu;
+    }
+
+    function loadMenu() {
+      document.querySelector('#content').removeChild(document.querySelector('.navbar').nextSibling);
+      document.querySelector('.navbar').after(createMenu());
+    }
+    loadNav();
+    loadHome();
+  </script>
+</body>
+
+</html>

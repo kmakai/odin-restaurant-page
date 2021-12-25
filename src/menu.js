@@ -1,3 +1,4 @@
+
 function createMenuItem(Item, discription, cost) {
     const menuitem = document.createElement('div');
     const item = document.createElement("h4");
@@ -15,6 +16,9 @@ function createMenuItem(Item, discription, cost) {
 
   function createMenu() {
     const menu = document.createElement('div')
+    const title = document.createElement("p");
+    title.textContent = "Menu";
+    menu.appendchild(title);
 
     menu.appendChild(createMenuItem("Coffee", "black coffee with sugar or your choice of sweetener. also available with lightener +$1.", "$6.99"));
     menu.appendChild(createMenuItem("Latte", "Espresso with your choice of milk as well as flavoring", "$4.45"));

@@ -1,5 +1,6 @@
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
+import loadContact from "./contact.js"
 console.log("hello world");
 
 function createNav() {
@@ -20,7 +21,7 @@ function createNav() {
   const listItem3 = document.createElement('li');
   listItem3.innerText = "Contact";
   navList.appendChild(listItem3);
-  listItem3.addEventListener("click", () => { loadContact });
+  listItem3.addEventListener("click", () => { loadContact(); });
 
   navigation.appendChild(navList);
   navigation.classList = "navbar";

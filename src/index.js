@@ -3,27 +3,33 @@ import loadMenu from "./menu.js";
 console.log("hello world");
 
 function createNav() {
-    const m = document.querySelector('#mainct');
-    const content = document.querySelector("#content");
     const navigation = document.createElement('nav');
     const navList = document.createElement('ul');
 
     const listItem1 = document.createElement('li');
     listItem1.innerText = "Home"
     navList.appendChild(listItem1);
+    listItem1.addEventListener("click", () => { loadHome() });
+
 
     const listItem2 = document.createElement('li');
-    listItem2.innerText = "About"
+    listItem2.innerText = "Menu"
     navList.appendChild(listItem2);
+    listItem2.addEventListener("click", () => { loadMenu() });
 
     const listItem3 = document.createElement('li');
     listItem3.innerText = "Contact";
     navList.appendChild(listItem3);
+    listItem3.addEventListener("click", () => { loadContact() });
 
     navigation.appendChild(navList);
-    m.before(navigation);
     navigation.classList = "navbar";
-}
 
-createNav();
-loadHome();
+    return navigation;
+  }
+
+  function loadNav() {
+    document.querySelector("#content").append(createNav());
+  }
+
+loadNav();

@@ -2,10 +2,11 @@ function createHome() {
     const main = document.createElement('div');
     main.id = "mainct";
 
-    const title = document.createElement('h3');
+    const title = document.createElement('h1');
     title.innerText = "Welcome to Binx's!";
 
     const img = document.createElement('img');
+    img.src ="images/welcome.png";
     img.alt = "binx";
 
     const discription = document.createElement('p');

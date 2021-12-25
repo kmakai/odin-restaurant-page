@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { 
+background-image: url("images/background.jpg");
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+header{
+    
+}
+
+footer{
+    text-align: center;
+}
+/* navbar styles and constant layout */
+.navbar{
+    width: auto;
+    display: flex;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+li{
+    padding: 1em;
+}
+li:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+#content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* home styles */
+#mainct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+    row-gap: 2em;
+}
+
+#mainct img{
+    width: 300px;
+}
+
+#mainct p{
+    font-size: 1.5em;
+    color: rgb(68, 12, 12);
+}
+
+/* menu page styles*/
+.menuct {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 2em 0;
+}
+
+/* contacts styles */
+.contactsct{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 2em 0;
+}
+
+.contactsct img{
+    width: 250px;
+}

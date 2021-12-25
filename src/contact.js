@@ -6,7 +6,8 @@ function createContact() {
     contacts.append(conTitle);
 
     const contactBinx = document.createElement('div');
-    const binxImg = document.createElement('img')
+    const binxImg = document.createElement('img');
+    binxImg.src = "images/binx.jpg"
     binxImg.alt = "Binx";
     const binxInfo = document.createElement('p');
     binxInfo.textContent =
@@ -17,6 +18,7 @@ function createContact() {
 
     const contactBella = document.createElement('div');
     const bellaImg = document.createElement('img');
+    bellaImg.src = "images/bella.png";
     bellaImg.alt = "Bella";
     const bellaInfo = document.createElement('p');
     bellaInfo.textContent =
@@ -28,6 +30,7 @@ function createContact() {
 
     contacts.append(contactBinx);
     contacts.append(contactBella);
+    contacts.classList = "contactsct"
 
     return contacts;
 }

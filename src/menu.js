@@ -25,6 +25,7 @@ function createMenuItem(Item, discription, cost) {
     menu.appendChild(createMenuItem("Pumpkin Spice Latte", "1/2 Pumpkin Pie 1/2 White Mocha W/ Espresso and your choice of milk", "$5.30"));
     menu.appendChild(createMenuItem("Cafe Breve", "double espresso + 5oz./14oz. steamed half & half", "$5.45"));
     menu.appendChild(createMenuItem("Melted Snowman (Affagato)", "scoop of vanilla ice cream + double espresso", "$7.50"));
+    menu.classList = "menuct";
     return menu;
   }
 

@@ -15,11 +15,8 @@ function createMenuItem(Item, discription, cost) {
   }
 
   function createMenu() {
-    const menu = document.createElement('div')
-    const title = document.createElement("p");
-    title.textContent = "Menu";
-    menu.appendchild(title);
-
+    const menu = document.createElement('div');
+    
     menu.appendChild(createMenuItem("Coffee", "black coffee with sugar or your choice of sweetener. also available with lightener +$1.", "$6.99"));
     menu.appendChild(createMenuItem("Latte", "Espresso with your choice of milk as well as flavoring", "$4.45"));
     menu.appendChild(createMenuItem("Carmel Macchiato", "Carmel sauce & Vanilla syrup W/ Espresso and your choice of milk", "$4.95"));

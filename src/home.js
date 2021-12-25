@@ -19,7 +19,6 @@ function createHome() {
     return main;
 
   }
-
   function loadHome() {
     if (document.querySelector('.navbar').nextSibling === null) {
       document.querySelector('.navbar').after(createHome());
@@ -29,4 +28,4 @@ function createHome() {
     }
   }
 
-export default loadHome();
+export default loadHome;

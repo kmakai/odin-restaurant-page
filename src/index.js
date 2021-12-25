@@ -9,18 +9,18 @@ function createNav() {
   const listItem1 = document.createElement('li');
   listItem1.innerText = "Home"
   navList.appendChild(listItem1);
-  listItem1.addEventListener("click", () => { loadHome() });
+  listItem1.addEventListener("click", () => { loadHome(); });
 
 
   const listItem2 = document.createElement('li');
   listItem2.innerText = "Menu"
   navList.appendChild(listItem2);
-  listItem2.addEventListener("click", () => { loadMenu() });
+  listItem2.addEventListener("click", () => { loadMenu(); });
 
   const listItem3 = document.createElement('li');
   listItem3.innerText = "Contact";
   navList.appendChild(listItem3);
-  listItem3.addEventListener("click", () => { loadContact() });
+  listItem3.addEventListener("click", () => { loadContact });
 
   navigation.appendChild(navList);
   navigation.classList = "navbar";
@@ -29,4 +29,9 @@ function createNav() {
 }
 
 
-document.querySelector("#content").append(createNav());
+function loadNav() {
+  document.querySelector("#content").append(createNav());
+}
+
+loadNav();
+loadHome();

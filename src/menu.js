@@ -30,4 +30,4 @@ function createMenuItem(Item, discription, cost) {
     document.querySelector('.navbar').after(createMenu());
   }
 
-export default loadMenu();
+export default loadMenu;
